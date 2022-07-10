@@ -1,3 +1,4 @@
+// Overall formatting of idb.js comes from University of Wisconsin Extended Campus Coding Bootcamp Module 18 lesson, "Pizza Hunt".
 let db;
 
 // create budget_tracker database if does not exist, else open database

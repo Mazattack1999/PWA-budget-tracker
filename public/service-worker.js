@@ -1,3 +1,5 @@
+// Overall formatting comes from University of Wisconsin Extended Campus Coding Bootcamp module lesson 19, "Food Festival".
+
 const APP_PREFIX = 'BudgetTracker-';     
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
@@ -43,8 +45,7 @@ self.addEventListener('activate', event => {
 })
 
 self.addEventListener('fetch', event => {
-    // Requests for data
-    // Strategy: Network-first, fallback to cache
+    // Network-first, fallback to cache
     if (event.request.method === 'GET') {
       event.respondWith(
         // open caches
@@ -68,8 +69,7 @@ self.addEventListener('fetch', event => {
       return
     }
   
-    // Request for static assets (.html, .css, .js, .jpg, .png)
-    // Strategy: Cache-first, fallback to Network
+    // Cache-first, fallback to Network
     event.respondWith(
       caches.match(event.request)
         .then(response => response || fetch(event.request))
