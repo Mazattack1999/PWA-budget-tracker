@@ -7,15 +7,16 @@ const FILES_TO_CACHE = [
   "index.html",
   "manifest.json",
   "css/styles.css",
-  "icons/icons-72x72.png",
-  "icons/icons-96x96.png",
-  "icons/icons-128x128.png",
-  "icons/icons-144x144.png",
-  "icons/icons-152x152.png",
-  "icons/icons-192x192.png",
-  "icons/icons-384x384.png",
-  "icons/icons-512x512.png",
-  "js/index.js"
+  "icons/icon-72x72.png",
+  "icons/icon-96x96.png",
+  "icons/icon-128x128.png",
+  "icons/icon-144x144.png",
+  "icons/icon-152x152.png",
+  "icons/icon-192x192.png",
+  "icons/icon-384x384.png",
+  "icons/icon-512x512.png",
+  "js/index.js",
+  "js/idb.js"
 ];
 
 self.addEventListener('install', event => {
@@ -44,7 +45,7 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     // Requests for data
     // Strategy: Network-first, fallback to cache
-    if (event.request.url.includes('dummyjson.com') && event.request.method === 'GET') {
+    if (event.request.method === 'GET') {
       event.respondWith(
         // open caches
         caches.open(CACHE_NAME)
