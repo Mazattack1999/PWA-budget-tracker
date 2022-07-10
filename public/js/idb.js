@@ -65,7 +65,7 @@ function uploadtransaction() {
 
                     const transaction = db.transaction(['new_transaction'], 'readwrite');
                     const transactionObjectStore = transaction.objectStore('new_transaction');
-                    // clear ll itimes in transaction object store
+                    // clear all itimes in transaction object store
                     transactionObjectStore.clear();
 
                     alert('All saved transactions have been submtitted');
