@@ -18,7 +18,7 @@ request.onsuccess = function(event) {
 
     // send all local database data if app is online
     if (navigator.onLine) {
-        uploadtransaction();
+        uploadTransaction();
     }
 }
 
@@ -38,7 +38,7 @@ function saveRecord(record) {
     transactionObjectStore.add(record);
 }
 
-function uploadtransaction() {
+function uploadTransaction() {
     // open new transaction 
     const transaction = db.transaction(['new_transaction'], 'readwrite');
 
@@ -81,4 +81,4 @@ function uploadtransaction() {
 }
 
 // listen for app to come online or back online
-window.addEventListener('online', uploadtransaction);
+window.addEventListener('online', uploadTransaction);
