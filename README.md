@@ -13,7 +13,7 @@ This application is intended to allow users to keep track of their funds with or
 This application also serves as a submission to an assignment testing students' abilities creating Progressive Web Applications (PWAs) using service workers, web mainfests, and IndexedDB.
 
 ## Built With
-- HTMl 
+- HTML
 - CSS
 - JavaScript
 - Node.js
